@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'convert_services_section.dart';
 import 'image_shape_widget.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -6,10 +7,20 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        ImageShapeWidget(),
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: ImageShapeWidget(),
+        ),
+        SliverToBoxAdapter(
+          child: ConvertServicesSection(),
+        ),
       ],
     );
   }
 }
+
+
+
+
+
