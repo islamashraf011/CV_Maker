@@ -14,7 +14,7 @@ class ConvertServicesSection extends StatelessWidget {
         CustomHeadLineTextWidget(
           headLineText: 'Convert Services',
         ),
-        ConvertServiceWidget(),
+        ConvertServicesWidget(),
         CustomDividerWidget(),
       ],
     );

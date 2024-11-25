@@ -1,9 +1,11 @@
+import 'package:cvmaker/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/components/custom_icon_text_button_widget.dart';
 import '../../../../../core/constants/convert_service_list.dart';
 
-class ConvertServiceWidget extends StatelessWidget {
-  const ConvertServiceWidget({super.key});
+class ConvertServicesWidget extends StatelessWidget {
+  const ConvertServicesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,9 @@ class ConvertServiceWidget extends StatelessWidget {
         return CustomIconTextButtonWidget(
           text: serviceName[index],
           icon: serviceIcons[index],
-          onPressed: () {},
+          onPressed: () {
+            context.push(AppRouter.convertProcessView);
+          },
         );
       },
     );
