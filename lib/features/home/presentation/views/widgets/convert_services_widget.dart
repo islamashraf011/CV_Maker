@@ -23,7 +23,14 @@ class ConvertServicesWidget extends StatelessWidget {
           text: serviceName[index],
           icon: serviceIcons[index],
           onPressed: () {
-            context.push(AppRouter.convertProcessView);
+            context.push(
+              AppRouter.convertProcessView,
+              extra: {
+                'headLineText': serviceName[index],
+                'subTitle': subtitleServiceName[index],
+                'buttonText': buttonServiceTitle[index],
+              },
+            );
           },
         );
       },
