@@ -18,7 +18,16 @@ abstract class AppRouter {
       ),
       GoRoute(
         path: convertProcessView,
-        builder: (context, state) => const ConvertProcessView(),
+        builder: (context, state) {
+          final Map<String, dynamic>? extraData =
+              state.extra as Map<String, dynamic>?;
+
+          return ConvertProcessView(
+            headLineText: extraData?['headLineText'] as String,
+            subTitle: extraData?['subTitle'] as String,
+            buttonText: extraData?['buttonText'] as String,
+          );
+        },
       ),
     ],
   );

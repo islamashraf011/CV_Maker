@@ -14,3 +14,17 @@ const List<IconData> serviceIcons = [
   FontAwesomeIcons.filePowerpoint,
   FontAwesomeIcons.fileExcel,
 ];
+
+const List<String> subtitleServiceName = [
+  'Convert JPG images to PDF in Seconds.',
+  'Convert Word file to PDF in Seconds.',
+  'Convert PowerPoint file to PDF in Seconds.',
+  'Convert Excel file to PDF in Seconds.',
+];
+
+const List<String> buttonServiceTitle = [
+  'Select JPG images',
+  'Select Word file',
+  'Select PowerPoint file',
+  'Select Excel file',
+];
